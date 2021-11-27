@@ -1,0 +1,73 @@
+[
+  {
+    "ProductID": 1,
+    "ProductName": "p1",
+    "UnitsInStock": 10,
+    "UnitsOnOrder": 10,
+    "UnitPrice": 8,
+  },
+  {
+    "ProductID": 2,
+    "ProductName": "p2",
+    "UnitsInStock": 5,
+    "UnitsOnOrder": 7,
+    "UnitPrice": 6
+  },
+  {
+    "ProductID": 3,
+    "ProductName": "p3",
+    "UnitsInStock": 100,
+    "UnitsOnOrder": 6,
+    "UnitPrice": 3
+  },
+  {
+    "ProductID": 4,
+    "ProductName": "p4",
+    "UnitsInStock": 2,
+    "UnitsOnOrder": 3,
+    "UnitPrice": 19
+  },
+  {
+    "ProductID": 5,
+    "ProductName": "p5",
+    "UnitsInStock": 0,
+    "UnitsOnOrder": 9,
+    "UnitPrice": 108
+  },
+  {
+    "ProductID": 6,
+    "ProductName": "p6",
+    "UnitsInStock": 21,
+    "UnitsOnOrder": 0,
+    "UnitPrice": 18
+  },
+  {
+    "ProductID": 7,
+    "ProductName": "p7",
+    "UnitsInStock": 25,
+    "UnitsOnOrder": 25,
+    "UnitPrice": 18
+  },
+  {
+    "ProductID": 8,
+    "ProductName": "p8",
+    "UnitsInStock": 29,
+    "UnitsOnOrder": 7,
+    "UnitPrice": 35,
+    "SupplierID": 6
+  },
+  {
+    "ProductID": 9,
+    "ProductName": "p9",
+    "UnitsInStock": 4,
+    "UnitsOnOrder": 32,
+    "UnitPrice": 35
+  },
+  {
+    "ProductID": 10,
+    "ProductName": "p10",
+    "UnitsInStock": 40,
+    "UnitsOnOrder": 0,
+    "UnitPrice": 130
+  }
+]
