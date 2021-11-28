@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+	<div id="products-box">
+	</div>
+	<div class="sidenav">
+		<div>
+			<h1 id="cart-title">Shopping cart</h1>
+		</div>
+	</div>
+	<div id="list">
+		<ul class="list-of-items">
+		</ul>
+	</div>
+	<div id="checkout">
+	</div>
+</body>
+<script type ="text/javascript">
+	const div = document.querySelector("products-box");
+	const listOfItems = document.querySelector("list-of-items");
+	const addbutton = document.querySelector(".add-item");
+	const removebutton = document.querySelector(".delete-item");
+	$(document).ready(function(){
+		fetch("../products.json").then(response=>response.json()).then(productsArray=>renderAllProducts(productsArray));
+	}
+
+	function renderAllProducts(productsArray){
+		productsArray.forEach(product => renderOneProduct(product))
+	}
+	
+	function renderAllCartItems(cartItemsArray){
+		cartItemsArray.forEach(cartItem => renderCartItem(cartItem))
+	}
+	
+	function renderOneProduct(product){
+		const element = document.createElement("div");
+		element.innerHTML = '<div class="item-card"><div class="center"><h2>${product.ProductName}</h2><p>${product.UnitPrice}</p><button class="add-item">Add to cart</button></div></div>';
+		div.append(element);
+	}
+	
+	function renderCartItem(cartItem){
+		const element = document.createElement("li");
+		element.innerHTML = '<p id="itemTag">${cartItem.Product.ProductName} ${cartItem.product.UnitPrice}<button class="delete-item">Remove</button></p>';
+		listOfItems.append(element);
+	}
+	
+	addbutton.addEventListener("click", event=> {
+	fetch("cartItems",{
+	method:"POST"
+	}).then(response=>response.json()).then(newCartItem=>{cartItemsArray.push(newCartItem);listOfItems.innerHTML="";renderAllCartItems(cartItemsArray)});
+		
+	}
+	
+	removebutton.addEventListener("click", event=> {
+	
+	fetch("cartItems/${cartItem.Id}",{
+	method:"DELETE"
+	}).then(response=>response.json()).then(results=>{cartsArray = result;renderAllCartItems(cartsArray)});
+		
+	}
+	
+	
+</script>
+</html>
